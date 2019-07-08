@@ -24,7 +24,7 @@ class LuckyController extends AbstractController
      *
      */
     
-    public function luckyNumber($max = 0) {
+    public function luckyNumberAction($max = 0) {
 	if($max > 0) {  $random_number = rand(1, $max); }
 	else {		$random_number = rand(); }
 
