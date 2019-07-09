@@ -3,12 +3,12 @@
 {% block content %}
 	<table>
 	<tr>
-		<th>id</th>
-		<th>string</th>
-		<th>text</th>
-		<th>datetime</th>
-		<th>boolean</th>
-		<th>integer</th>
+		<th>id  <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'id', 'sortDir':'asc' } ) }}"> &#9757</a> <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'id', 'sortDir':'desc' } ) }}">&#9759</a></th>
+		<th>string <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'string', 'sortDir':'asc' } ) }}">&#9757</a> <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'string', 'sortDir':'desc' } ) }}">&#9759</a></th>
+		<th>text <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'text', 'sortDir':'asc' } ) }}">&#9757</a> <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'text', 'sortDir':'desc' } ) }}">&#9759</a></th>
+		<th>datetime <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'datetime', 'sortDir':'asc' } ) }}">&#9757</a> <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'datetime', 'sortDir':'desc' } ) }}">&#9759</a></th>
+		<th>boolean <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'boolean', 'sortDir':'asc' } ) }}">&#9757</a> <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'boolean', 'sortDir':'desc' } ) }}">&#9759</a></th>
+		<th>integer <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'integer_value', 'sortDir':'asc' } ) }}">&#9757</a> <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'integer_value', 'sortDir':'desc' } ) }}">&#9759</a></th>
 		<th>liens</th>
 	</tr>
 	

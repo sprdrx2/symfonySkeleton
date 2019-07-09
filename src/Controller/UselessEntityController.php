@@ -20,12 +20,15 @@ use App\Form\UselessEntityType;
 class UselessEntityController extends AbstractController
 {
     /**
-     * @Route("/useless", name="uselessEntityIndex")
+	 * @Route ("/useless", name = "uselessEntityIndex")
+	 * @Route ("/useless/sort-by-{sortAttr}-{sortDir}", name = "uselessEntityIndexSorted", requirements = { "sortDir" = "asc|desc", "sortAttr" = "id|string|text|datetime|boolean|integer_value" } )	
      */
-    public function listUselessAction()
+    public function listUselessAction($sortAttr = "id", $sortDir = "asc")
     {
+		$uselessEntities = $this->getDoctrine()->getRepository(UselessEntity::class)->findBy(array(), [ $sortAttr => $sortDir ]);
+					
         return $this->render('useless_entity/index.html.twig', [
-            'useless_entities' => $this->getDoctrine()->getRepository(UselessEntity::Class)->findAll()
+            'useless_entities' => $uselessEntities,
         ]);
     }
 
