@@ -30,7 +30,7 @@ class DefaultController extends AbstractController
 	    return $this->render("default/blog.$_locale.html.twig", [
            	'_locale' => $_locale,
 		'year' 	  => $year,
-		'title'	  => str_replace($title,'-',' '),	
+		'title'	  => $title,	
         ]);
     }
   

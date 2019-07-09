@@ -2,6 +2,6 @@
 
 {% block content %}
 	<p>
-	Voici l'article {{ title }}, publié en {{ year }}, en français.
+	Voici l'article {{ title | replace({"-": " "}) }}, publié en {{ year }}, en français.
 	</p>	
 {% endblock %}
