@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+	<table>
+	<tr>
+		<th>id</th>
+		<th>string</th>
+		<th>text</th>
+		<th>datetime</th>
+		<th>boolean</th>
+		<th>integer</th>
+		<th>lien</th>
+	</tr>
+	
+	{% for useless_entity in useless_entities %}
+	<tr>
+		<td>{{ useless_entity.id }}</td>
+		<td>{{ useless_entity.string }}</td>
+		<td>{{ useless_entity.text }}</td>
+		<td>{{ useless_entity.datetime|date("m/d/Y") }}</td>
+		<td>{{ useless_entity.boolean }}</td>
+		<td>{{ useless_entity.integervalue }}</td>
+		<td><a href="{{ path('uselessEntityShow', {'id': useless_entity.id }) }}">voir</a></td>
+	</tr>
+	{% endfor %}
+	
+	</table>
+{% endblock %}
