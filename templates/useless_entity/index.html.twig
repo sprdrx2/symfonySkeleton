@@ -18,7 +18,7 @@
 		<td>{{ useless_entity.string }}</td>
 		<td>{{ useless_entity.text }}</td>
 		<td>{{ useless_entity.datetime|date("m/d/Y") }}</td>
-		<td>{{ useless_entity.boolean }}</td>
+		<td>{{ useless_entity.boolean ? 'True' : 'False' }}</td>
 		<td>{{ useless_entity.integervalue }}</td>
 		<td><a href="{{ path('uselessEntityShow', {'id': useless_entity.id }) }}">voir</a> ou </td>
 		<td><a href="{{ path('uselessEntityUpdateAction', {'id': useless_entity.id }) }}">update</a> ou</td>

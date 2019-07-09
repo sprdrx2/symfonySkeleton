@@ -7,7 +7,7 @@
 	
 	<p>
 	Publié le {{ useless_entity.datetime|date("m/d/Y") }}.
-	Public: {{ useless_entity.boolean }}.
+	Public: {{ useless_entity.boolean ? 'Oui' : 'Non' }}.
 	Like(s): {{ useless_entity.integervalue }}.
 	</p>
 	
