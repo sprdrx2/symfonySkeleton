@@ -4,9 +4,13 @@ body {
 
 header, footer {
 	width: 100%;	
-	border: 1px solid black;
 }
 
+
+header { text-align: center; border-bottom: 1px solid black; }
+footer { text-align: right; border-top: 1px solid black; }
+
 #boxmiddle { display: flex; justify-content: space-around; flex-direction: row-reverse; }
+#page { display: block; }
 
 @import "~bootstrap/scss/bootstrap";

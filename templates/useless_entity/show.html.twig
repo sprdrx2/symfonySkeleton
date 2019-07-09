@@ -11,4 +11,7 @@
 	Like(s): {{ useless_entity.integervalue }}.
 	</p>
 	
+	<p>{{ form(deleteButton) }}<br />
+	<a href="{{ path('uselessEntityUpdateAction', {'id': useless_entity.id }) }}">update</a></p>
+	
 {% endblock %}

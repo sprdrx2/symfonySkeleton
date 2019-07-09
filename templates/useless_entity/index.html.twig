@@ -9,7 +9,7 @@
 		<th>datetime</th>
 		<th>boolean</th>
 		<th>integer</th>
-		<th>lien</th>
+		<th>liens</th>
 	</tr>
 	
 	{% for useless_entity in useless_entities %}
@@ -20,7 +20,9 @@
 		<td>{{ useless_entity.datetime|date("m/d/Y") }}</td>
 		<td>{{ useless_entity.boolean }}</td>
 		<td>{{ useless_entity.integervalue }}</td>
-		<td><a href="{{ path('uselessEntityShow', {'id': useless_entity.id }) }}">voir</a></td>
+		<td><a href="{{ path('uselessEntityShow', {'id': useless_entity.id }) }}">voir</a> ou </td>
+		<td><a href="{{ path('uselessEntityUpdateAction', {'id': useless_entity.id }) }}">update</a> ou</td>
+		<td><a href="{{ path('uselessEntity_delete', {'id': useless_entity.id }) }}">delete</a></td>
 	</tr>
 	{% endfor %}
 	
