@@ -10,6 +10,7 @@
 		<th>boolean <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'boolean', 'sortDir':'asc' } ) }}">&#9757</a> <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'boolean', 'sortDir':'desc' } ) }}">&#9759</a></th>
 		<th>integer <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'integer_value', 'sortDir':'asc' } ) }}">&#9757</a> <a href="{{ path('uselessEntityIndexSorted', { 'sortAttr':'integer_value', 'sortDir':'desc' } ) }}">&#9759</a></th>
 		<th>liens</th>
+		<th>RobotHumain</th>
 	</tr>
 	
 	{% for useless_entity in useless_entities %}
@@ -23,6 +24,9 @@
 		<td><a href="{{ path('uselessEntityShow', {'id': useless_entity.id }) }}">voir</a> ou </td>
 		<td><a href="{{ path('uselessEntityUpdateAction', {'id': useless_entity.id }) }}">update</a> ou</td>
 		<td><a href="{{ path('uselessEntity_delete', {'id': useless_entity.id }) }}">delete</a></td>
+		{% if useless_entity.robotHumain != null %}
+		<td>#{{ useless_entity.robotHumain.serialnumber }}: {{ useless_entity.robotHumain.name }} ({{ useless_entity.robotHumain.surname }})</td>
+		{% endif %}
 	</tr>
 	{% endfor %}
 	

@@ -41,6 +41,12 @@ class UselessEntity
      */
     private $integer_value;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="RobotHumain", inversedBy="uselessEntities")
+     * @ORM\JoinColumn(name="robot_humain_id", referencedColumnName="id")
+     */
+    private $robotHumain;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -102,6 +108,18 @@ class UselessEntity
     public function setIntegerValue(int $integer_value): self
     {
         $this->integer_value = $integer_value;
+
+        return $this;
+    }
+
+    public function getRobotHumain(): ?RobotHumain
+    {
+        return $this->robotHumain;
+    }
+
+    public function setRobotHumain(?RobotHumain $robotHumain): self
+    {
+        $this->robotHumain = $robotHumain;
 
         return $this;
     }
